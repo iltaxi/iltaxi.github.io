@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru"> 
+<head>
+	<title> Yandex-Taxi </title>
+<meta charset="utf-8">
+<link href="css/minimal-table.css" rel="stylesheet" type="text/css">
+</head>
+	<style>
+		table {
+		  border: 1px solid black;
+		  border-collapse: collapse;
+		 }
+		 tr, td, th {
+		 	padding: 20px;
+		  border: 1px solid black;
+		  border-collapse: collapse;
+		 }
+		 .fig {
+			text-align: center;
+		}
+		.center {
+		    margin-left: auto;
+		    margin-right: auto;
+		    display: block
+		}
+
+		.text-js{
+  			opacity: 2;
+		}
+		.cursor{
+		  display: block;
+		  position: absolute;
+		  height: 100%;
+		  top: 0;
+		  right: -5px;
+		  width: 2px;
+		  /* Change colour of Cursor Here */
+		  background-color: red;
+		  z-index: 1;
+		  animation: flash 0.5s none infinite alternate;
+		}
+		@keyframes flash{
+		  0%{
+		    opacity: 1;
+		  }
+		  100%{
+		    opacity: 0;
+		  }
+		}
+
+		@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
+
+		*{
+		  margin: 0;
+		  padding: 0;
+		  boz-sizing: border-box;
+		  font-family: "Open Sans", sans-serif
+		}
+		/*body{
+		  background: linear-gradient(135deg,#00C4FF,#9D1BB2);
+		  height: 100vh;
+		  display: flex;
+		  align-items: center;
+		  justify-content: center;
+		}*/
+		/*// Text Can be styled just like normal*/
+		.headline{
+		  margin: 20px;
+		  color: white;
+		  font-size: 32px;
+		  text-align: center;
+		  h1{
+		    letter-spacing: 1.6px;
+		    font-weight: 300;
+		  }
+		}
+
+		.twitterLink{
+		  position: absolute;
+		  bottom: 0;
+		  right: 0;
+		  margin: 10px 15px;
+		  z-index: 7;
+		  svg{
+		    width: 25px;
+		  }
+		}
+
+		.credit{
+		  position: fixed;
+		  bottom: 20px;
+		  left: 50%;
+		  transform: translateX(-50%);
+		  color: white;
+		  text-decoration: none;
+		}
+ 	</style>
+	<body bgcolor="FFD7OO"> 
+		<br> <br>   <p class="fig"><img src="icon.png" height="100" width="100"> </p> <hr> <br> <br>
+		<div class="type-js headline">
+			<h1 style="color: red" align="center" class="text-js"> YANDEX TAXI  </h1>
+		</div> 
+		<h2 align="center"> Яндекс.Такси — одна из самостоятельных бизнес-единиц «Яндекса», предлагающая сервисы агрегатора такси и доставки еды и продуктов, а также мобильные приложения к ним. Штаб-квартира компании находится в Москве. </h2>
+		<p class="fig"> <audio controls> <source src="Score.mp3" type="audio/mpeg"> </p>
+		   	 	<source src="Score.ogg" type="audio/ogg; codecs=vorbis">
+		   	 </audio> 
+		  <p class="fig"> <img src="images.jpeg" height="400" width="600"> </p> <br>
+		  <p class="fig"> <img src="yandex.jpg"> </p>
+		   <div> <video class="center" width="600" height="400" controls="controls" poster="optimals.jpg">
+	         	<source src="yandex.ogv" type='video/ogg; codecs="theora, vorbis"'>
+	         		<source src="yandex.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'> 
+	         			<source src="yandex.webm" type='video/webm; codecs="vp8, vorbis"'>
+	         				 
+	         		</video> </div>
+		  <table width="50%" align="center" style="background-color: white"> 
+		  <tr>
+		  	<th> Страна</th>
+		  	<th> Дата появления </th>
+		  </tr>
+		<tr>
+		  	<td> Россия </td>
+		  	<td>11 октябрь 2011 год </td>
+		  </tr>
+		  <tr>
+		  	<td>Казахстан </td>
+		  	<td> 28 июля 2016 </td>
+		 	  </tr>
+		  <tr>
+		  	<td>Белоруссия</td>
+		  	<td>25 февраля 2016</td>
+		  </tr>
+		  <tr>
+		  	<td>Украина</td>
+		  	<td>25 октября 2016</td>
+		  </tr>
+		   <tr>
+		  	<td>Киргизия</td>
+		  	<td>9 ноября 2017</td>
+		  </tr>
+		   <tr>
+		  	<td>Узбекистан</td>
+		  	<td>4 апреля 2018</td>
+		  </tr>
+		  <tr> 
+		  	<td>  Грузия</td>
+		  	<td> 26 августа 2016 </td>
+		  </tr>
+		  <tr> 
+		  	<td> Армения </td>
+		  	<td> 1 июля 2016 </td>
+		  </tr>
+		  <tr> 
+		  	<td>Финляндия </td>
+		  	<td>9 ноября 2018 </td>
+		  </tr>
+		  </table>
+	   	
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	   	<script>
+				function autoType(elementClass, typingSpeed){
+			  	var thhis = $(elementClass);
+			  	thhis.css({
+			    	"position": "relative",
+			    	"display": "inline-block"
+			  	});
+			  thhis.prepend('<div class="cursor" style="right: initial; left:0;"></div>');
+			  thhis = thhis.find(".text-js");
+			  var text = thhis.text().trim().split('');
+			  var amntOfChars = text.length;
+			  var newString = "";
+			  thhis.text("|");
+			  setTimeout(function(){
+			    thhis.css("opacity",1);
+			    thhis.prev().removeAttr("style");
+			    thhis.text("");
+			    for(var i = 0; i < amntOfChars; i++){
+			      (function(i,char){
+			        setTimeout(function() {        
+			          newString += char;
+			          thhis.text(newString);
+			        },i*typingSpeed);
+			      })(i+1,text[i]);
+			    }
+			  },1500);
+
+			}
+
+			$(document).ready(function(){
+			  // Now to start autoTyping just call the autoType function with the 
+			  // class of outer div
+			  // The second paramter is the speed between each letter is typed.   
+			  autoType(".type-js",200);
+			});
+	   	</script> 
+	</body> 
+</html>
+
